@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #f39c12;
+  --background-color: #f5f6fa;
+}
+
+/* Prevent text selection */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Disable right-click */
+body {
+  oncontextmenu: "return false";
+  background-color: var(--background-color);
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-item {
+  @apply flex flex-col items-center text-gray-600 hover:text-primary-600 transition-colors;
+}
+
+.nav-item.active {
+  @apply text-primary-600;
+}
+
+.server-btn {
+  @apply px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors;
+}
+
+.server-btn.active {
+  @apply bg-blue-700;
+}
+
+/* Swiper customization */
+.swiper-slide {
+  @apply bg-white rounded-lg overflow-hidden shadow-lg;
+}
+
+.swiper-slide img {
+  @apply w-full h-full object-cover;
+}
+
+/* Settings page */
+.timer-item {
+  @apply cursor-pointer transition-transform duration-200;
+}
+
+.timer-item img {
+  @apply rounded-lg shadow-md;
+}
+
+/* Info page */
+.info-item {
+  @apply transition-transform duration-200 hover:translate-x-2;
+}
